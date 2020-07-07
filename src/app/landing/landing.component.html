@@ -1,3 +1,25 @@
 <app-header-bar></app-header-bar>
-<p>Home page</p>
-<p>{{movie}}</p>
+<div class="content-landing">
+  <div class="landing-bg">
+    <div class="container">
+      <h1>Seja bem vindo!</h1>
+      <h3>
+        Não sabe que filme assistir?<br />
+        Então encontrou o lugar certo, aqui você terá acesso há mais de 1 milhão
+        de avaliações.<br />
+        Nunca mais perca horas procurando filmes!
+      </h3>
+
+      <div class="content-search">
+        <input
+          type="text"
+          name="search"
+          [(ngModel)]="search"
+          required
+          placeholder="Buscar"
+        />
+        <button (click)="handleSubmit()">Buscar</button>
+      </div>
+    </div>
+  </div>
+</div>

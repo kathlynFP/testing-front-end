@@ -1,5 +1,6 @@
 import { MoviesService } from './movies.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,8 +10,8 @@ import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, HeaderBarComponent, LandingComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [MoviesService],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -4,22 +4,24 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.scss']
+  styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit {
-
   movie: Array<any>;
+  search = '';
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesService: MoviesService) {}
 
-  ngOnInit(): void {
-    this.movieFind();
-  }
+  ngOnInit(): void {}
 
-  movieFind(): any {
-    this.moviesService.getTitleFind().subscribe(data => {
+  movieFind(title: string): any {
+    this.moviesService.getTitleFind(title).subscribe((data) => {
       console.log(data);
       this.movie = data;
     });
+  }
+  handleSubmit(): any {
+    console.log(this.search);
+    this.movieFind(this.search);
   }
 }
