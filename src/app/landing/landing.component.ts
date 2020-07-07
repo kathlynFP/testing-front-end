@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class LandingComponent implements OnInit {
   movies: Array<any>;
   search = '';
+  active = false;
 
   constructor(private moviesService: MoviesService) {}
 
@@ -16,12 +17,11 @@ export class LandingComponent implements OnInit {
 
   movieFind(title: string): any {
     this.moviesService.getTitleFind(title).subscribe((data) => {
-      console.log(data);
+      this.active = true;
       this.movies = data.results;
     });
   }
   handleSubmit(): any {
-    console.log(this.search);
     this.movieFind(this.search);
   }
 }
