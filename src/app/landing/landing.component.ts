@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit {
-  movie: Array<any>;
+  movies: Array<any>;
   search = '';
 
   constructor(private moviesService: MoviesService) {}
@@ -17,7 +17,7 @@ export class LandingComponent implements OnInit {
   movieFind(title: string): any {
     this.moviesService.getTitleFind(title).subscribe((data) => {
       console.log(data);
-      this.movie = data;
+      this.movies = data.results;
     });
   }
   handleSubmit(): any {

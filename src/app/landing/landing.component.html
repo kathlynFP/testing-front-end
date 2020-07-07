@@ -18,7 +18,21 @@
           required
           placeholder="Buscar"
         />
-        <button (click)="handleSubmit()">Buscar</button>
+        <a class="btn-search" (click)="handleSubmit()">
+          <img
+            class="btn-search-icon"
+            src="../../assets/images/icon-search.png"
+            alt="buscar"
+          />
+        </a>
+      </div>
+      <div class="container-search-menu active">
+        <div class="search-menu-box">
+          <div *ngFor="let movie of movies" class="search-menu-item">
+            <p>{{ movie.title }}</p>
+            <p>{{ movie.year }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

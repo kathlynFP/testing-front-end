@@ -15,7 +15,7 @@
 .landing-bg {
   position: fixed;
   z-index: 1;
-  background: url(../../assets/images/background1.jpg);
+  background: url(../../assets/images/background2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -23,7 +23,8 @@
   height: calc(100vh - 61px);
 }
 .content-search {
-  display: block;
+  display: flex;
+  // position: relative;
   width: 100%;
   max-width: 400px;
 
@@ -34,4 +35,44 @@
     padding: 15px 10px;
     font-size: 16px;
   }
+}
+.btn-search {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 9px;
+}
+.btn-search-icon {
+  width: 20px;
+  height: 20px;
+  padding-top: 6px;
+}
+.container-search-menu {
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background-color: #efefef;
+  p {
+    margin: 0px 0px 8px 0px;
+    color: #1f1f1f;
+  }
+}
+.search-menu-box {
+  padding: 16px;
+  overflow: hidden;
+}
+.search-menu-item {
+  width: 100%;
+  overflow: hidden;
+  padding: 8px;
+  border-bottom: 1px solid #c5c0c0;
+}
+.container-search-menu .ative {
+  display: block;
 }
